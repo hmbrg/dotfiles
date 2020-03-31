@@ -186,7 +186,10 @@ echo "  › Remove the animation when hiding/showing the Dock"
 defaults write com.apple.dock autohide-time-modifier -float 0
 
 echo "  › Automatically hide and show the Dock"
-defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock autohide -bool false
+
+echo "  › Disable icon magnification"
+defaults write com.apple.dock magnification -int 0
 
 echo "  › Don't animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
@@ -233,7 +236,7 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 ###############################################################################
 # SSD-specific tweaks                                                         #
 ###############################################################################
-if [ -n "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
+#if [ -n "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
 	# echo "  › Disable local backups"
 	# https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
 	# sudo tmutil disablelocal
@@ -250,7 +253,7 @@ if [ -n "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; th
 
 	# echo "  ›  Disable the sudden motion sensor as it’s not useful for SSDs"
 	# sudo pmset -a sms 0
-fi
+#fi
 
 #############################
 

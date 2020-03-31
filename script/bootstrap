@@ -105,6 +105,10 @@ else
 	fail "error installing dependencies"
 fi
 
+info "Run macOS not so-sensible defaults"
+source "$DOTFILES_ROOT/macos/set-defaults.sh"
+success "macOS defaults successfully set"
+
 zsh="$(find_zsh)"
 test -z "$TRAVIS_JOB_ID" &&
 	test "$(expr "$SHELL" : '.*/\(.*\)')" != "zsh" &&
