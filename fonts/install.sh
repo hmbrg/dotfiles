@@ -9,7 +9,6 @@ if [ "$(uname -s)" = "Darwin" ]; then
 		brew tap homebrew/cask-fonts
 		brew cask install font-source-code-pro
 		brew cask install font-inter
-		brew cask install font-roboto
 	else
 		install ~/Library/Fonts
 	fi
