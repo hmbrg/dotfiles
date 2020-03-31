@@ -40,6 +40,9 @@ chflags nohidden ~/Library
 echo "  › Show the /Volumes folder"
 sudo chflags nohidden /Volumes
 
+echo "  › Show all hidden files"
+defaults write com.apple.finder AppleShowAllFiles true
+
 echo "  › Set a really fast key repeat"
 defaults write NSGlobalDomain KeyRepeat -int 2
 defaults write NSGlobalDomain InitialKeyRepeat -int 15
@@ -55,7 +58,7 @@ defaults write com.apple.screensaver askForPassword -int 1
 defaults write com.apple.screensaver askForPasswordDelay -int 0
 
 echo "  › Always show scrollbars"
-defaults write NSGlobalDomain AppleShowScrollBars -string "Always"
+defaults write NSGlobalDomain AppleShowScrollBars -string "WhenScrolling"
 # Possible values: `WhenScrolling`, `Automatic` and `Always`
 
 echo "  › Disable Dashboard"
@@ -71,12 +74,12 @@ echo "  › Disable smart quotes and smart dashes as they're annoying when typin
 defaults write NSGlobalDomain NSAutomaticQuoteSubstitutionEnabled -bool false
 defaults write NSGlobalDomain NSAutomaticDashSubstitutionEnabled -bool false
 
-echo "  › Disable auto-correct"
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
+# echo "  › Disable auto-correct"
+# defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
 
-echo "  › Set up trackpad & mouse speed to a reasonable number"
-defaults write -g com.apple.trackpad.scaling 2
-defaults write -g com.apple.mouse.scaling 2.5
+# echo "  › Set up trackpad & mouse speed to a reasonable number"
+# defaults write -g com.apple.trackpad.scaling 2
+# defaults write -g com.apple.mouse.scaling 2.5
 
 echo "  › Avoid the creation of .DS_Store files on network volumes"
 defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
@@ -84,14 +87,14 @@ defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 echo "  › Disable the 'Are you sure you want to open this application?' dialog"
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-echo "  › Set dark interface style"
-defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
+# echo "  › Set dark interface style"
+# defaults write NSGlobalDomain AppleInterfaceStyle -string "Dark"
 
-echo "  › Set graphite appearance"
-defaults write NSGlobalDomain AppleAquaColorVariant -int 6
+# echo "  › Set graphite appearance"
+# defaults write NSGlobalDomain AppleAquaColorVariant -int 6
 
-echo "  › Set graphite highlight color"
-defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
+# echo "  › Set graphite highlight color"
+# defaults write NSGlobalDomain AppleHighlightColor -string "0.847059 0.847059 0.862745"
 
 echo "  › Show battery percent"
 defaults write com.apple.menuextra.battery ShowPercent -bool true
@@ -110,8 +113,9 @@ echo "  › Removing duplicates in the 'Open With' menu"
 
 echo ""
 echo "› Finder:"
-echo "  › Always open everything in Finder's list view"
-defaults write com.apple.Finder FXPreferredViewStyle Nlsv
+
+# echo "  › Always open everything in Finder's list view"
+# defaults write com.apple.Finder FXPreferredViewStyle Nlsv
 
 echo "  › Set the Finder prefs for showing a few different volumes on the Desktop"
 defaults write com.apple.finder ShowExternalHardDrivesOnDesktop -bool true
@@ -120,8 +124,8 @@ defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
 echo "  › Expand save panel by default"
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 
-echo "  › Set sidebar icon size to small"
-defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
+# echo "  › Set sidebar icon size to small"
+# defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
 echo "  › Show status bar"
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -129,11 +133,11 @@ defaults write com.apple.finder ShowStatusBar -bool true
 echo "  › Show path bar"
 defaults write com.apple.finder ShowPathbar -bool true
 
-echo "  › Disable the warning before emptying the Trash"
-defaults write com.apple.finder WarnOnEmptyTrash -bool false
+# echo "  › Disable the warning before emptying the Trash"
+# defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
-echo "  › Save to disk by default, instead of iCloud"
-defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
+# echo "  › Save to disk by default, instead of iCloud"
+# defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 
 echo "  › Display full POSIX path as Finder window title"
 defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
@@ -152,8 +156,8 @@ defaults -currentHost write com.apple.ImageCapture disableHotPlug -bool true
 
 echo ""
 echo "› Browsers:"
-echo "  › Hide Safari's bookmark bar"
-defaults write com.apple.Safari ShowFavoritesBar -bool false
+# echo "  › Hide Safari's bookmark bar"
+# defaults write com.apple.Safari ShowFavoritesBar -bool false
 
 echo "  › Set up Safari for development"
 defaults write com.apple.Safari IncludeInternalDebugMenu -bool true
@@ -162,15 +166,15 @@ defaults write com.apple.Safari WebKitDeveloperExtrasEnabledPreferenceKey -bool 
 defaults write com.apple.Safari "com.apple.Safari.ContentPageGroupIdentifier.WebKit2DeveloperExtrasEnabled" -bool true
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
-echo "  › Disable the annoying backswipe in Chrome"
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
+# echo "  › Disable the annoying backswipe in Chrome"
+# defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool false
 
 #############################
 
 echo ""
 echo "› Dock"
 echo "  › Setting the icon size of Dock items to 45 pixels for optimal size/screen-realestate"
-defaults write com.apple.dock tilesize -int 45
+defaults write com.apple.dock tilesize -int 30
 
 echo "  › Speeding up Mission Control animations and grouping windows by application"
 defaults write com.apple.dock expose-animation-duration -float 0.1
@@ -187,40 +191,6 @@ defaults write com.apple.dock autohide -bool true
 echo "  › Don't animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
 
-#############################
-
-echo ""
-echo "› Transmission:"
-echo "  › Use ~/Downloads/Incomplete to store incomplete downloads"
-defaults write org.m0k.transmission UseIncompleteDownloadFolder -bool true
-defaults write org.m0k.transmission IncompleteDownloadFolder -string "$HOME/Downloads/Incomplete"
-
-echo "  › Don't prompt for confirmation before downloading"
-defaults write org.m0k.transmission DownloadAsk -bool false
-
-echo "  › Trash original torrent files"
-defaults write org.m0k.transmission DeleteOriginalTorrent -bool true
-
-echo "  › Hide the donate message"
-defaults write org.m0k.transmission WarningDonate -bool false
-
-echo "  › Hide the legal disclaimer"
-defaults write org.m0k.transmission WarningLegal -bool false
-
-echo "  › Auto-add .torrent files in ~/Downloads"
-defaults write org.m0k.transmission AutoImportDirectory -string "$HOME/Downloads"
-
-echo "  › Auto-resize the window to fit transfers"
-defaults write org.m0k.transmission AutoSize -bool true
-
-echo "  › Auto update to betas"
-defaults write org.m0k.transmission AutoUpdateBeta -bool true
-
-echo "  › Set up the best block list"
-defaults write org.m0k.transmission EncryptionRequire -bool true
-defaults write org.m0k.transmission BlocklistAutoUpdate -bool true
-defaults write org.m0k.transmission BlocklistNew -bool true
-defaults write org.m0k.transmission BlocklistURL -string "http://john.bitsurge.net/public/biglist.p2p.gz"
 
 #############################
 
@@ -249,9 +219,9 @@ defaults write com.apple.mail DisableInlineAttachmentViewing -bool true
 echo "  › Disable automatic spell checking"
 defaults write com.apple.mail SpellCheckingBehavior -string "NoSpellCheckingEnabled"
 
-echo "  ›  Disable send and reply animations in Mail.app"
-defaults write com.apple.mail DisableReplyAnimations -bool true
-defaults write com.apple.mail DisableSendAnimations -bool true
+# echo "  ›  Disable send and reply animations in Mail.app"
+# defaults write com.apple.mail DisableReplyAnimations -bool true
+# defaults write com.apple.mail DisableSendAnimations -bool true
 
 #############################
 
@@ -264,22 +234,22 @@ defaults write com.apple.TimeMachine DoNotOfferNewDisksForBackup -bool true
 # SSD-specific tweaks                                                         #
 ###############################################################################
 if [ -n "$TRAVIS_JOB_ID" ] && diskutil info disk0 | grep SSD >/dev/null 2>&1; then
-	echo "  › Disable local backups"
+	# echo "  › Disable local backups"
 	# https://classicyuppie.com/what-crap-is-this-os-xs-mobilebackups/
-	sudo tmutil disablelocal
+	# sudo tmutil disablelocal
 
-	echo "  › Disable hibernation (speeds up entering sleep mode)"
-	sudo pmset -a hibernatemode 0
+	# echo "  › Disable hibernation (speeds up entering sleep mode)"
+	# sudo pmset -a hibernatemode 0
 
-	echo "  › Remove the sleep image file to save disk space"
-	sudo rm /private/var/vm/sleepimage
-	echo "  › Create a zero-byte file instead..."
-	sudo touch /private/var/vm/sleepimage
-	echo "  › ...and make sure it can’t be rewritten"
-	sudo chflags uchg /private/var/vm/sleepimage
+	# echo "  › Remove the sleep image file to save disk space"
+	# sudo rm /private/var/vm/sleepimage
+	# echo "  › Create a zero-byte file instead..."
+	# sudo touch /private/var/vm/sleepimage
+	# echo "  › ...and make sure it can’t be rewritten"
+	# sudo chflags uchg /private/var/vm/sleepimage
 
-	echo "  ›  Disable the sudden motion sensor as it’s not useful for SSDs"
-	sudo pmset -a sms 0
+	# echo "  ›  Disable the sudden motion sensor as it’s not useful for SSDs"
+	# sudo pmset -a sms 0
 fi
 
 #############################
