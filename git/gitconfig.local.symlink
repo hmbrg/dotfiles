@@ -19,7 +19,7 @@
 	ui = true
 [core]
 	excludesfile = ~/.gitignore
-	editor = vim
+	editor = nano
 	compression = -1
 	autocrlf = input
 	whitespace = trailing-space,space-before-tab
@@ -45,7 +45,5 @@
 	default = simple
 [submodule]
 	fetchJobs = 4
-[commit]
-	template = ~/.dotfiles/git/template.txt
 [log]
 	showSignature = false
