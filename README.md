@@ -27,6 +27,15 @@ $ zsh # or just close and open your terminal again.
 
 > All changed files will be backed up with a `.backup` suffix.
 
+### Good to know
+- install.sh should check if application is already installed 
+  
+  ```bash
+  if command -v code >/dev/null; then
+    # CODE GOES HERE
+  fi
+  ```
+
 ### Recommended Software
 
 For macOS, I recommend:
