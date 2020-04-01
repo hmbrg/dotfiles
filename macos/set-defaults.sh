@@ -127,8 +127,8 @@ defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
 # echo "  › Set sidebar icon size to small"
 # defaults write NSGlobalDomain NSTableViewDefaultSizeMode -int 1
 
-echo "  › Show status bar"
-defaults write com.apple.finder ShowStatusBar -bool true
+echo "  › Hide status bar"
+defaults write com.apple.finder ShowStatusBar -bool false
 
 echo "  › Show path bar"
 defaults write com.apple.finder ShowPathbar -bool true
@@ -266,8 +266,8 @@ if [ -z "$KEEP_ITUNES" ]; then
 	unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
 fi
 
-echo "  › Disable Spotify web helper"
-disable_agent ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper
+# echo "  › Disable Spotify web helper"
+# disable_agent ~/Applications/Spotify.app/Contents/MacOS/SpotifyWebHelper
 
 #############################
 
