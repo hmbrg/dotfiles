@@ -1,0 +1,42 @@
+tap "getantibody/tap"
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+tap "homebrew/dupes"
+tap "homebrew/versions"
+
+brew "git-lfs"
+
+brew "ffmpeg"
+brew "imagemagick"
+brew "node"
+brew "youtube-dl"
+
+brew "getantibody/tap/antibody"
+
+# QuickLook
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+
+# GUI apps
+cask "1password"
+cask "discord"
+cask "google-chrome"
+cask "iterm2"
+cask "mos"
+cask "notion"
+cask "spotify"
+cask "visual-studio-code"
+cask "figma"
+cask "gitkraken"
+
+mas "Hidden Bar", id: 1452453066
+mas "Keep It", id: 1272768911
+mas "Magnet", id: 441258766
+mas "Spark", id: 1176895641
+mas "WhatsApp", id: 1147396723
