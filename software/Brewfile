@@ -7,13 +7,15 @@ tap "homebrew/core"
 tap "homebrew/dupes"
 tap "homebrew/versions"
 
+# Programming
 brew "git-lfs"
+brew "node"
+brew "rustup-init"
 
+# CLI tools
 brew "ffmpeg"
 brew "imagemagick"
-brew "node"
 brew "youtube-dl"
-
 brew "getantibody/tap/antibody"
 
 # QuickLook
@@ -35,6 +37,7 @@ cask "visual-studio-code"
 cask "figma"
 cask "gitkraken"
 
+mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
 mas "Keep It", id: 1272768911
 mas "Magnet", id: 441258766
