@@ -213,8 +213,11 @@ defaults write com.apple.dock minimize-to-application -bool true
 echo "  › Don't animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
 
-echo "  › Remove default apps from dock"
-defaults write com.apple.dock persistent-apps -array
+# Check if Dock apps have been changed, otherwise...
+if defaults read com.apple.dock persistent-apps | grep "Keynote" >/dev/null 2>&1; then 
+	echo "  › Remove default apps from dock"
+	defaults write com.apple.dock persistent-apps -array
+fi
 
 #############################
 
