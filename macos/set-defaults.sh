@@ -109,6 +109,13 @@ echo "  › Removing duplicates in the 'Open With' menu"
 /System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister \
 	-kill -r -domain local -domain system -domain user
 
+echo "  › Save screenshots to Downloads"
+defaults write com.apple.screencapture location -string "${HOME}/Downloads"
+
+echo "  › Save screenshots in PNG format"
+# (other options: BMP, GIF, JPG, PDF, TIFF)
+defaults write com.apple.screencapture type -string "png"
+
 #############################
 
 echo ""
@@ -145,6 +152,12 @@ defaults write com.apple.finder _FXShowPosixPathInTitle -bool true
 echo "  › Disable the warning when changing a file extension"
 defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
 
+echo "  › Show all filename extensions"
+defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+echo "  › When performing a search, search the current folder by default"
+defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+
 #############################
 
 echo ""
@@ -173,7 +186,7 @@ defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 
 echo ""
 echo "› Dock"
-echo "  › Setting the icon size of Dock items to 45 pixels for optimal size/screen-realestate"
+echo "  › Setting the icon size of Dock items to 30 pixels for optimal size/screen-realestate"
 defaults write com.apple.dock tilesize -int 30
 
 echo "  › Speeding up Mission Control animations and grouping windows by application"
@@ -185,15 +198,23 @@ defaults write com.apple.dock autohide-delay -float 0
 echo "  › Remove the animation when hiding/showing the Dock"
 defaults write com.apple.dock autohide-time-modifier -float 0
 
-echo "  › Automatically hide and show the Dock"
+echo "  › Always the Dock"
 defaults write com.apple.dock autohide -bool false
 
 echo "  › Disable icon magnification"
 defaults write com.apple.dock magnification -int 0
 
+echo "  › Use scale effect for minimizing applications"
+defaults write com.apple.dock mineffect -string "scale"
+
+echo "  › Minimize windows into their application’s icon"
+defaults write com.apple.dock minimize-to-application -bool true
+
 echo "  › Don't animate opening applications from the Dock"
 defaults write com.apple.dock launchanim -bool false
 
+echo "  › Remove default apps from dock"
+defaults write com.apple.dock persistent-apps -array
 
 #############################
 
@@ -262,8 +283,10 @@ echo "› Media:"
 if [ -z "$KEEP_ITUNES" ]; then
 	echo "  › Disable iTunes helper"
 	disable_agent /Applications/iTunes.app/Contents/MacOS/iTunesHelper.app
-	echo "  › Prevent play button from launching iTunes"
-	unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
+
+	# Deactivates other apps from using media buttons
+	# echo "  › Prevent play button from launching iTunes"
+	# unload_agent /System/Library/LaunchAgents/com.apple.rcd.plist
 fi
 
 # echo "  › Disable Spotify web helper"
