@@ -16,6 +16,7 @@ brew "imagemagick"
 brew "youtube-dl"
 brew "getantibody/tap/antibody"
 brew "mas"
+brew "fzf"
 
 # QuickLook
 cask "qlimagesize"
