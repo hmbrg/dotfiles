@@ -4,8 +4,6 @@ tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
-tap "homebrew/dupes"
-tap "homebrew/versions"
 
 # Programming
 brew "git-lfs"
@@ -17,6 +15,7 @@ brew "ffmpeg"
 brew "imagemagick"
 brew "youtube-dl"
 brew "getantibody/tap/antibody"
+brew "mas"
 
 # QuickLook
 cask "qlimagesize"
@@ -24,6 +23,10 @@ cask "qlmarkdown"
 cask "qlstephen"
 cask "quicklook-csv"
 cask "quicklook-json"
+
+# fonts
+cask "font-source-code-pro"
+cask "font-inter"
 
 # GUI apps
 cask "1password"
@@ -36,7 +39,9 @@ cask "spotify"
 cask "visual-studio-code"
 cask "figma"
 cask "gitkraken"
+cask "nvidia-geforce-now"
 
+# App Store apps
 mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
 mas "Keep It", id: 1272768911
