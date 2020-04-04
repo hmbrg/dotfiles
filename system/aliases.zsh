@@ -32,6 +32,3 @@ if [ "$(uname -s)" != "Darwin" ]; then
 		alias open="xdg-open"
 	fi
 fi
-
-# ft alias to fix context issue
-alias ft=". ft"
