@@ -41,6 +41,7 @@ cask "visual-studio-code"
 cask "figma"
 cask "gitkraken"
 cask "nvidia-geforce-now"
+cask "radio-silence"
 
 # App Store apps
 mas "Amphetamine", id: 937984704
