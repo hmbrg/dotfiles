@@ -44,6 +44,7 @@ cask "nvidia-geforce-now"
 cask "radio-silence"
 
 # App Store apps
+mas "Xcode", id: 497799835
 mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
 mas "Keep It", id: 1272768911
