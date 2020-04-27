@@ -40,8 +40,8 @@ cask "spotify"
 cask "visual-studio-code"
 cask "figma"
 cask "gitkraken"
-cask "nvidia-geforce-now"
 cask "radio-silence"
+cask "shadow"
 
 # App Store apps
 mas "Xcode", id: 497799835
