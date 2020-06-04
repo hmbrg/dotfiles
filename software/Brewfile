@@ -8,6 +8,7 @@ tap "homebrew/core"
 # Programming
 brew "git-lfs"
 brew "node"
+brew "yarn"
 brew "rustup-init"
 
 # CLI tools
