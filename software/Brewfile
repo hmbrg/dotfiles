@@ -42,7 +42,7 @@ cask "visual-studio-code"
 cask "figma"
 cask "gitkraken"
 cask "radio-silence"
-cask "shadow"
+cask "appcleaner"
 
 # App Store apps
 mas "Xcode", id: 497799835
