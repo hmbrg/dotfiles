@@ -26,19 +26,22 @@ $ zsh # or just close and open your terminal again.
 > All changed files will be backed up with a `.backup` suffix.
 
 ### Installing new software and maintenance
+
 All software installed on the machine should be specified in the `software/Brewfile`.
 Use `dot_update` to install and update software.
 
 Useful command:
--  Check what software is installed but not listed in the `Brewfile`. Use `--force` to uninstall.
-  ```console
-  $ brew bundle cleanup
-  ```
 
+- Check what software is installed but not listed in the `Brewfile`. Use `--force` to uninstall.
+
+```console
+$ brew bundle cleanup
+```
 
 ### Good to know
-- install.sh should check if application is already installed 
-  
+
+- install.sh should check if application is already installed
+
   ```bash
   if command -v code >/dev/null; then
     # CODE GOES HERE
@@ -51,11 +54,6 @@ macOS defaults get configured when running the bootstrap script.
 
 And logging out and in again/restart.
 
-### Themes and fonts being used
-
-Theme is **[Dracula](https://draculatheme.com)** and the font is
-**Source Code Pro Light**.
-
 ## Further help:
 
 - [Personalize your configs](/docs/PERSONALIZATION.md)
@@ -67,4 +65,3 @@ Theme is **[Dracula](https://draculatheme.com)** and the font is
 Feel free to contribute. Pull requests will be automatically
 checked/linted with [Shellcheck](https://github.com/koalaman/shellcheck)
 and [shfmt](https://github.com/mvdan/sh).
-

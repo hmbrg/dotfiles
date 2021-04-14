@@ -33,7 +33,6 @@ cask "font-inter"
 # GUI apps
 cask "1password"
 cask "discord"
-cask "google-chrome"
 cask "iterm2"
 cask "mos"
 cask "notion"
@@ -43,12 +42,12 @@ cask "figma"
 cask "gitkraken"
 cask "radio-silence"
 cask "appcleaner"
+cask "keep-it"
+cask "raindropio"
+cask "rectangle"
 
 # App Store apps
 mas "Xcode", id: 497799835
 mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
-mas "Keep It", id: 1272768911
-mas "Magnet", id: 441258766
 mas "Spark", id: 1176895641
-mas "WhatsApp", id: 1147396723
