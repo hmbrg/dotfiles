@@ -1,0 +1,57 @@
+tap "homebrew/bundle"
+tap "homebrew/cask"
+tap "homebrew/cask-fonts"
+tap "homebrew/cask-versions"
+tap "homebrew/core"
+
+# Programming
+brew "git-lfs"
+brew "node"
+brew "yarn"
+
+# CLI tools
+brew "ffmpeg"
+brew "imagemagick"
+brew "youtube-dl"
+brew "mas"
+
+# QuickLook
+cask "qlimagesize"
+cask "qlmarkdown"
+cask "qlstephen"
+cask "quicklook-csv"
+cask "quicklook-json"
+
+# fonts
+cask "font-source-code-pro"
+cask "font-inter"
+
+# GUI apps
+cask "1password"
+cask "discord"
+cask "iterm2"
+cask "microsoft-edge"
+cask "mos"
+cask "notion"
+cask "spotify"
+cask "visual-studio-code"
+cask "figma"
+cask "gitkraken"
+cask "radio-silence"
+cask "appcleaner"
+cask "keep-it"
+cask "raindropio"
+cask "rectangle"
+cask "linear-linear"
+cask "zoom"
+cask "microsoft-teams"
+cask "signal"
+cask "whatsapp"
+cask "raycast"
+
+
+# App Store apps
+mas "Xcode", id: 497799835
+mas "Amphetamine", id: 937984704
+mas "Hidden Bar", id: 1452453066
+mas "Spark", id: 1176895641
