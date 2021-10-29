@@ -4,6 +4,19 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 tap "homebrew/core"
 
+# CLI tools
+brew "fish" 
+brew "bat" 
+brew "git-delta" 
+brew "dog" 
+brew "exa" 
+brew "fd" 
+brew "fzf" 
+brew "gh" 
+brew "ripgrep" 
+brew "starship" 
+brew "zoxide"
+
 # Programming
 brew "git-lfs"
 brew "node"
