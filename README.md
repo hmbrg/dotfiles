@@ -46,7 +46,7 @@ First, make sure you have all those things installed:
 Then, run these steps:
 
 ```console
-$ git clone https://github.com/caarlos0/dotfiles.fish.git ~/.dotfiles
+$ git clone https://github.com/hmbrg/dotfiles.git ~/.dotfiles
 $ cd ~/.dotfiles
 $ ./script/bootstrap.fish
 ```
@@ -103,11 +103,7 @@ For both Linux and macOS:
 - [`ripgrep`](https://github.com/BurntSushi/ripgrep) a faster `grep`;
 - [`zoxide`](https://github.com/ajeetdsouza/zoxide) a smarter `cd` command;
 
-To install them all with `brew`:
-
-```console
-$ brew install fish bat git-delta dog exa fd fzf gh grc kubectx ripgrep starship zoxide
-```
+They will all get automatically installed during bootstrap.
 
 On Ubuntu:
 
