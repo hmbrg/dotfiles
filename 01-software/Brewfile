@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
@@ -7,6 +6,7 @@ tap "homebrew/core"
 # CLI tools
 brew "fish" 
 brew "bat" 
+brew "grc"
 brew "git-delta" 
 brew "dog" 
 brew "exa" 
@@ -23,8 +23,6 @@ brew "node"
 brew "yarn"
 
 # CLI tools
-brew "ffmpeg"
-brew "imagemagick"
 brew "youtube-dl"
 brew "mas"
 
