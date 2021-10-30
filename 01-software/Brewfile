@@ -36,6 +36,7 @@ cask "quicklook-json"
 # fonts
 cask "font-source-code-pro"
 cask "font-inter"
+cask "font-inconsolata-nerd-font"
 
 # GUI apps
 cask "1password"
