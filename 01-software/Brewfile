@@ -16,11 +16,13 @@ brew "gh"
 brew "ripgrep" 
 brew "starship" 
 brew "zoxide"
+brew "micro"
 
 # Programming
 brew "git-lfs"
 brew "node"
 brew "yarn"
+brew "postgresql"
 
 # CLI tools
 brew "youtube-dl"
@@ -34,7 +36,6 @@ cask "quicklook-csv"
 cask "quicklook-json"
 
 # fonts
-cask "font-source-code-pro"
 cask "font-inter"
 cask "font-inconsolata-nerd-font"
 
@@ -67,3 +68,4 @@ mas "Xcode", id: 497799835
 mas "Amphetamine", id: 937984704
 mas "Hidden Bar", id: 1452453066
 mas "Spark", id: 1176895641
+mas "DaftCloud for SoundCloud", id: 1320450034

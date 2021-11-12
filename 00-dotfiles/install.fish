@@ -1,5 +1,5 @@
 #!/usr/bin/env fish
-set -Ux EDITOR nano
+set -Ux EDITOR micro
 set -Ux VISUAL $EDITOR
 set -Ux WEDITOR code
 
